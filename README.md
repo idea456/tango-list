@@ -1,6 +1,6 @@
 # 🇯🇵 単語イスト
 
-> An app that acts like a to-do list to store everyday vocabulary encounters in Japanese.
+> An app that acts like a to-do list to store everyday vocabulary encounters in Japanese. The app uses Jisho to search for Japanese words.
 
 # Screenshots
 ![screencapture-localhost-3000-2020-05-31-19_05_57](https://user-images.githubusercontent.com/25546711/83350924-2294d580-a372-11ea-82c7-ba9e71c9cb80.png)
