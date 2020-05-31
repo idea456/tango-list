@@ -1,0 +1,19 @@
+{
+  "name": "mainichi-tango",
+  "version": "1.0.0",
+  "description": "An app that acts like a to-do list to store everyday vocabulary encounters in Japanese.",
+  "author": "Adrian Rio Wongso Atmojo",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
