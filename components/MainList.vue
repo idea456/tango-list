@@ -92,12 +92,14 @@ export default {
       });
     },
     saveAsANKI() {
+      this.loading = true;
       const apkg = new AnkiExport("vocabulary list");
       this.words.map(word =>
         apkg.addCard(`${word.title} (${word.reading})`, word.meaning)
       );
       apkg.save().then(zip => {
         saveAs(zip, "vocabulary list.apkg");
+        this.loading = false;
       });
     },
     saveAsTextFile() {
