@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-alert type="error" :value="error" dismissible
-      >Could not find word in Jisho.org</v-alert
-    >
+    <v-alert type="error" :value="error" dismissible>{{
+      this.errorMessage
+    }}</v-alert>
     <v-row justify="center">
       <v-text-field
         v-model="word"
@@ -75,7 +75,8 @@ export default {
     return {
       words: [],
       loading: false,
-      error: false
+      error: false,
+      errorMessage: ""
     };
   },
   methods: {
@@ -129,12 +130,18 @@ export default {
           if (res.data.data.length === 0) {
             console.log(this.error);
             this.error = true;
+            this.errorMessage = "Could not find word in Jisho.org";
           } else {
             this.addWord(res.data.data[0]);
           }
         })
         .catch(err => {
-          alert(err);
+          if (err.message === "Network Error") {
+            this.error = true;
+            this.loading = false;
+            this.errorMessage =
+              "No internet found, please check your internet connection";
+          }
         });
     }
   }
