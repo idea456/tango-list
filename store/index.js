@@ -11,3 +11,9 @@ export const mutations = {
     state.errorMessage = newErrorMessage;
   }
 };
+
+export const getters = {
+  getError(state) {
+    return state.error;
+  }
+};
