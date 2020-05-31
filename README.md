@@ -1,4 +1,4 @@
-# 📝🇯🇵 単語イスト
+# 📝🇯🇵 単語リスト
 
 > An app that acts like a to-do list to store everyday vocabulary encounters in Japanese. The app uses Jisho.org API to search for Japanese words.
 
