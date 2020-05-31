@@ -2,6 +2,9 @@
 
 > An app that acts like a to-do list to store everyday vocabulary encounters in Japanese.
 
+# Screenshots
+![screencapture-localhost-3000-2020-05-31-19_05_57](https://user-images.githubusercontent.com/25546711/83350924-2294d580-a372-11ea-82c7-ba9e71c9cb80.png)
+
 ## Build Setup
 
 ```bash
@@ -20,3 +23,6 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+# Credits
+All thanks to Jisho for making this app possible : https://jisho.org/
