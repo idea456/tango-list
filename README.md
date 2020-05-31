@@ -1,4 +1,4 @@
-# mainichi-tango
+# 🇯🇵 毎日の単語
 
 > An app that acts like a to-do list to store everyday vocabulary encounters in Japanese.
 
