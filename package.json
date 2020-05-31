@@ -11,11 +11,22 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "anki-apkg-export": "^4.0.3",
     "axios": "^0.19.2",
+    "file-saver": "^2.0.2",
+    "fs": "0.0.1-security",
+    "jspdf": "^1.5.3",
+    "markdown-pdf": "^10.0.0",
+    "markdown-table": "^2.0.0",
     "nuxt": "^2.0.0",
+    "pdf-table": "^1.0.2",
+    "pdfkit": "^0.11.0",
+    "table": "^5.4.6",
+    "text-table": "^0.2.0",
     "unofficial-jisho-api": "^2.0.8"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.0.0"
+    "@nuxtjs/vuetify": "^1.0.0",
+    "script-loader": "^0.7.2"
   }
 }

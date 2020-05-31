@@ -47,12 +47,27 @@
       <v-overlay :value="loading">
         <v-progress-circular indeterminate size="64"></v-progress-circular>
       </v-overlay>
+
+      <v-col cols="12">
+        <v-btn v-if="this.words.length !== 0" @click="saveAsTextFile"
+          >Save as Text file</v-btn
+        >
+        <v-btn
+          style="margin-left: 20px"
+          v-if="this.words.length !== 0"
+          @click="saveAsANKI"
+          >Save as ANKI</v-btn
+        >
+      </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import FileSaver from "file-saver";
+import { table, getBorderCharacters } from "table";
+import AnkiExport from "anki-apkg-export";
 
 export default {
   name: "MainList",
@@ -74,7 +89,33 @@ export default {
         meaning: word.senses[0].english_definitions,
         part_of_speech: word.senses[0].part_of_speech
       });
-      console.log(word.japanese[0].word);
+    },
+    saveAsANKI() {
+      const apkg = new AnkiExport("vocabulary list");
+      this.words.map(word =>
+        apkg.addCard(`${word.title} (${word.reading})`, word.meaning)
+      );
+      apkg.save().then(zip => {
+        saveAs(zip, "vocabulary list.apkg");
+      });
+    },
+    saveAsTextFile() {
+      let texts = [];
+      this.words.map(word =>
+        texts.push([word.title, word.reading, word.meaning])
+      );
+
+      let output = table(texts, {
+        border: getBorderCharacters(`void`),
+        drawHorizontalLine: () => {
+          return false;
+        }
+      });
+
+      let blob = new Blob([output], {
+        type: "text/plain;charset=utf-8"
+      });
+      FileSaver.saveAs(blob, "vocabulary list.txt");
     },
     async searchWord() {
       this.loading = true;

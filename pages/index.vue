@@ -15,11 +15,6 @@ export default {
     return {
       showError: true
     };
-  },
-  methods: {
-    setError() {
-      console.log("YESSSSS");
-    }
   }
 };
 </script>
