@@ -1,6 +1,6 @@
 # 📝🇯🇵 単語リスト
 
-> An app that acts like a to-do list to store everyday vocabulary encounters in Japanese. The app uses Jisho.org API to search for Japanese words.
+> An app that acts like a to-do list to store everyday vocabulary encounters in Japanese. The app uses Jisho.org API to search for Japanese words. Fun fact, I did this project for my studies cuz searching for words in dictionary and putting them in a list is a pain :(
 <br />
 https://tango-list.herokuapp.com/
 
