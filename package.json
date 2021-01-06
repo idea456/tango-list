@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "anki-apkg-export": "^4.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "file-saver": "^2.0.2",
     "fs": "0.0.1-security",
     "jspdf": "^1.5.3",
