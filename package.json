@@ -19,7 +19,7 @@
     "jspdf": "^1.5.3",
     "markdown-pdf": "^10.0.0",
     "markdown-table": "^2.0.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "pdf-table": "^1.0.2",
     "pdfkit": "^0.11.0",
     "table": "^5.4.6",
